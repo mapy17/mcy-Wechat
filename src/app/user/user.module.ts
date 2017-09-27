@@ -6,7 +6,7 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { CalendarModule } from 'primeng/components/calendar/calendar';
 
 import { UserComponent } from './user.component';
-import { SharedModule } from '../shared/shared.module';
+import { MySharedModule } from '../shared/shared.module';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { FormControlComponent } from './user-profile/dynamic-form/form-control.component';
@@ -15,7 +15,7 @@ import { userRoutes } from './user.routes';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
+    MySharedModule,
     DataTableModule,
     CalendarModule,
     RouterModule.forChild(userRoutes)

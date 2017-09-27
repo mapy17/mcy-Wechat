@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
+import { MySharedModule } from '../shared/shared.module';
 
 import { TreeModule, TreeNode } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
@@ -13,9 +13,9 @@ import { OrgComponent } from './org.component';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
+    MySharedModule,
     TreeModule,
-    InputTextModule, 
+    InputTextModule,
     RouterModule.forChild(orgRoutes)
   ],
   declarations: [

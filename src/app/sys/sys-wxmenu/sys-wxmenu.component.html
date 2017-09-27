@@ -1,0 +1,41 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<div [@flyIn]="'active'">
+    <div class="row">
+        <button type="button" class="btn btn-success" (click)="commitToWx()">提交到微信服务器</button>
+        <button type="button" class="btn btn-success" (click)="Newmenu()">新建</button>
+        <button type="button" class="btn btn-primary" (click)="Editmenu()">修改</button>
+        <button type="button" class="btn btn-warning" (click)="TollgeState()">停用/启用</button>
+        <button type="button" class="btn btn-danger" (click)="Delete()">删除</button>
+    </div>
+    <div class="row">
+        <p-treeTable [value]="WxMenus" selectionMode="single" [(selection)]="selectedMenu" (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)">
+            <p-header>微信菜单管理</p-header>
+            <p-column field="menuno" header="菜单序号"></p-column>
+            <p-column field="menuname" header="菜单名"></p-column>
+            <p-column field="menutype" header="菜单类型"></p-column>
+            <p-column field="menuevent" header="菜单事件"></p-column>
+            <p-column field="menulink" header="菜单连接"></p-column>
+            <p-column field="menustate" header="是否可用"></p-column>
+        </p-treeTable>
+    </div>
+    <div class="row">
+        <div class="text text-danger">
+            自定义菜单最多包括3个一级菜单，每个一级菜单最多包含5个二级菜单。
+            <p>
+                一级菜单最多4个汉字，二级菜单最多7个汉字，多出来的部分将会以“...”代替。
+            </p>
+
+        </div>
+    </div>
+</div>
+<p-dialog header="{{dialogTitle}}" [(visible)]="dialogDisplay" modal="true" responsive="true" [width]="600">
+    
+</p-dialog>
+
+<p-confirmDialog header="" icon="fa fa-question-circle" width="425" #cd>
+    <p-footer>
+        <button type="button" class="btn btn-success" (click)="cd.accept()">确定</button>
+        <button type="button" class="btn btn-danger" (click)="cd.reject()">取消</button>
+    </p-footer>
+</p-confirmDialog>

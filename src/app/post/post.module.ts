@@ -6,12 +6,12 @@ import { postRoutes } from './post.routes';
 import { PostTableComponent } from './post-table/post-table.component';
 import { WritePostComponent } from './write-post/write-post.component';
 import { PostTableService } from './post-table/services/post-table.service';
-import { SharedModule } from '../shared/shared.module';
+import { MySharedModule } from '../shared/shared.module';
 
 @NgModule({
 imports: [
     CommonModule,
-    SharedModule,
+    MySharedModule,
     RouterModule.forChild(postRoutes)
   ],
   declarations: [

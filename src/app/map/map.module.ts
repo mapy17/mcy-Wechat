@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
+import { MySharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { mapRoutes } from './map.routes';
 import { MapComponent } from './map.component';
@@ -10,7 +10,7 @@ import { AmapComponent } from './gaode-map/amap/amap.component';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
+    MySharedModule,
     RouterModule.forChild(mapRoutes)
   ],
   declarations: [

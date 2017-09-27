@@ -13,7 +13,8 @@ export const workspaceRoutes = [
 			{ path: 'role', loadChildren: '../role/role.module#RoleModule' },
 			{ path: 'permission', loadChildren: '../permission/permission.module#PermissionModule' },
 			{ path: 'sys', loadChildren: '../sys/sys.module#SysModule' },
-			{ path: 'map', loadChildren: '../map/map.module#MapModule' }
+			{ path: 'map', loadChildren: '../map/map.module#MapModule' },
+			{ path: 'attention', loadChildren: '../attention/attention.module#AttentionModule'}
 		]
 	}
 ];

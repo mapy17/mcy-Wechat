@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { EventBusService } from '../common/services/event-bus.service';
-import { FooterInfoComponent } from '../footer-info/footer-info.component';
-import { LeftNavComponent } from '../left-nav/left-nav.component';
-import { TopMenuComponent } from '../top-menu/top-menu.component';
+import { FooterInfoComponent } from './footer-info/footer-info.component';
+import { LeftNavComponent } from './left-nav/left-nav.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 import { UserTableComponent } from '../user/user-table/user-table.component';
 
 @Component({
@@ -11,7 +11,7 @@ import { UserTableComponent } from '../user/user-table/user-table.component';
 	styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent implements OnInit {
-	public isCollapsed:boolean=false;
+	public isCollapsed: Boolean = false;
 
 	constructor(private elementRef: ElementRef, private eventBusService: EventBusService) {
 
@@ -23,7 +23,7 @@ export class WorkspaceComponent implements OnInit {
 		});
 	}
 
-	private toggleMenuStatus(isCollapse: boolean): void {
-		this.isCollapsed=isCollapse;
+	private toggleMenuStatus(isCollapse: Boolean): void {
+		this.isCollapsed = isCollapse;
 	}
 }

@@ -15,11 +15,11 @@ export class LoginService {
             .set('grant_type', 'password')
             .set('UserName', username)
             .set('Password', pwd)
-       
-       return Observable.from( this.http.post('token', para, { headers: head, }));
+
+        return Observable.from(this.http.post('token', para, { headers: head, }));
     }
 
-    logout(): Observable<any>{
+    logout(): Observable<any> {
         return Observable.from(this.http.get('api/customerinfo/get?id=000000000001'));
     }
 }

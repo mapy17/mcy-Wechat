@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login.component';
 export const appRoutes = [
 	{
 		path: '',
-		redirectTo: 'login',
+		redirectTo: 'workspace',
 		pathMatch: 'full'
 	},
 	{
